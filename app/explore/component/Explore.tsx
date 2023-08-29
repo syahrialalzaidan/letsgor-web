@@ -61,7 +61,7 @@ export default function Explore() {
 
   return (
     <div className="">
-      <div className="bg-[url('/explore/atas.svg')] flex flex-col justify-center items-center gap-8 bg-cover h-96 w-full pt-40">
+      <div className="bg-[url('/explore/atas.svg')] flex flex-col justify-center items-center gap-8 bg-cover h-72 w-full pt-20">
         <div className="text-white">
           <h1 className="font-semibold text-4xl">Temukan Lapangan Pilihanmu</h1>
           <p className="text-lg">
@@ -126,7 +126,7 @@ export default function Explore() {
               </select>
           </div>
 
-          <button className="bg-[#0E8A76] text-white py-3 px-10 rounded-lg" onClick={()=> router.push("/search")}>
+          <button className="bg-[#0E8A76] text-white py-3 px-10 rounded-lg" onClick={()=> router.push("/explore/search")}>
             Cari
           </button>
         </div>

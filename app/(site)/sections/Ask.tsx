@@ -10,7 +10,7 @@ const Ask = () => {
   return (
     <div className="w-full h-[90vh] bg-[url('/landing/Lari.svg')] bg-cover bg-no-repeat">
       <div className="flex h-full w-full px-[5%]">
-        <div className="w-1/2 flex flex-col justify-center">
+        <div className="w-1/2 flex flex-col justify-center text-white">
           <h1 className="font-semibold text-4xl">
             Lelah menerima puluhan chat pelanggan? Kontak kami!
           </h1>
@@ -41,7 +41,7 @@ const Ask = () => {
             <h1 className="text-primary font-semibold text-4xl mb-2">ada pertanyaan..?</h1>
             <input type="text" className="bg-gray-300 py-4 px-4" placeholder="Masukan email anda disini..." />
             <input type="text" className="bg-gray-300 py-4 px-4" placeholder="Masukan pertanyaan anda disini..." />
-            <button className="bg-primary font-semibold py-4">Kirim</button>
+            <button className="bg-primary text-white font-semibold py-4">Kirim</button>
           </div>
         </div>
       </div>

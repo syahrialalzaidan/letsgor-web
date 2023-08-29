@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -40,14 +41,18 @@ const Navbar = () => {
   return (
     <div
       className={`fixed top-0 inset-x-0 ${
-        isTop ? "bg-transparent" : "bg-gradient-to-r from-primary to-[170%] to-secondary"
+        isTop
+          ? "bg-transparent"
+          : "bg-gradient-to-r from-primary to-[170%] to-secondary"
       } py-4 z-40 transition duration-400`}
     >
       <div className="w-full h-full flex justify-between items-center px-[5%]">
-        <div className="flex items-center gap-2">
-          <Image src="/logo/Logo.svg" alt="Logo" width={30} height={30} />
-          <p className="font-semibold text-lg">LetsGOR</p>
-        </div>
+        <Link href="/">
+          <div className="flex items-center gap-2">
+            <Image src="/logo/Logo.svg" alt="Logo" width={30} height={30} />
+            <p className="font-semibold text-lg text-white">LetsGOR</p>
+          </div>
+        </Link>
         <div className="flex gap-7 items-center">
           {navbarData.map((item) => {
             return (
