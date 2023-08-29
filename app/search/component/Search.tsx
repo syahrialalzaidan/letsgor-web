@@ -1,13 +1,10 @@
-"use client";
-import Image from "next/image";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsCalendarDateFill } from "react-icons/bs";
 import { BiSolidBasketball } from "react-icons/bi";
-import Boxgor from "./Boxgor";
-import { useRouter } from "next/navigation";
+import { FaFilter, FaSort } from "react-icons/fa";
+import Boxgor from "@/app/explore/component/Boxgor";
 
-export default function Explore() {
-  const router = useRouter();
+export default function Search() {
   const data = [
     {
       name: "Pasaga",
@@ -58,17 +55,9 @@ export default function Explore() {
       image: "/explore/obc.svg",
     },
   ];
-
   return (
-    <div className="">
-      <div className="bg-[url('/explore/atas.svg')] flex flex-col justify-center items-center gap-8 bg-cover h-96 w-full pt-40">
-        <div className="text-white">
-          <h1 className="font-semibold text-4xl">Temukan Lapangan Pilihanmu</h1>
-          <p className="text-lg">
-            Sekarang Anda dapat menemukan lapangan yang sesuai untukmu
-          </p>
-        </div>
-
+    <div>
+      <div className="pt-32 flex flex-col justify-center items-center bg-[url('/search/atas-search.svg')] h-64 bg-cover w-full">
         <div className="flex gap-3">
           <div className="flex">
             {/* <div className="bg-white text-[#0E8A76] flex w-72 p-3 gap-2 rounded-lg">
@@ -118,41 +107,44 @@ export default function Explore() {
               <option value="voli">Volley</option>
               <option value="pingpong">Pingpong</option>
               <option value="others">others</option>
-
-              
-
-
-        
-              </select>
+            </select>
           </div>
 
-          <button className="bg-[#0E8A76] text-white py-3 px-10 rounded-lg" onClick={()=> router.push("/search")}>
+          <button className="bg-[#0E8A76] text-white py-3 px-10 rounded-lg">
             Cari
           </button>
         </div>
       </div>
 
-      <div className="px-28">
-        <h1 className="text-2xl font-semibold mt-8 mb-4">Last Seen</h1>
-        <div className="flex gap-12 flex-wrap justify-center mb-9">
-          {data.slice(0, 3).map((place, index) => (
-            <Boxgor
-              key={index}
-              name={place.name}
-              address={place.address}
-              distance={place.distance}
-              rating={place.rating}
-              price={place.price}
-              image={place.image}
-            />
-          ))}
+      <div className="px-20 mt-5">
+        <div className="flex gap-6">
+          <div className="flex">
+            <FaFilter className="ml-2 text-2xl text-[#0E8A76] absolute self-center" />
+            <select
+              className="bg-[#D0E3E0] text-[#0E8A76] flex w-40 py-3 px-10 gap-2 rounded-lg"
+              placeholder="Tanggal"
+            >
+              <option value="basket">Basket</option>
+              <option value="futsal">Futsal</option>
+              <option value="badminton">Badminton</option>
+            </select>
+          </div>
+
+          <div className="flex">
+            <FaSort className="ml-2 text-2xl text-[#0E8A76] absolute self-center" />
+            <select
+              className="bg-[#D0E3E0] text-[#0E8A76] flex w-40 py-3 px-10 gap-2 rounded-lg"
+              placeholder="Tanggal"
+            >
+              <option value="basket">Price</option>
+              <option value="futsal">Distance</option>
+              <option value="badminton">Rating</option>
+            </select>
+          </div>
         </div>
 
-        <h1 className="font-bold text-5xl text-center text-[#0E8A76]">
-          Rekomendasi Lapangan UntukMu
-        </h1>
-        <div className="flex flex-wrap gap-12 justify-center mt-12">
-          {data.slice(3, 6).map((place, index) => (
+        <div className="flex flex-wrap justify-center items-center mt-8 gap-12">
+          {data.map((place, index) => (
             <Boxgor
               key={index}
               name={place.name}
@@ -163,6 +155,7 @@ export default function Explore() {
               image={place.image}
             />
           ))}
+
           {data.map((place, index) => (
             <Boxgor
               key={index}
