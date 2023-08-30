@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 interface BookingItem {
   lapangan: string;
@@ -48,6 +49,8 @@ const formatBookingTimes = (bookingTimes: string[]): string => {
 
 const Bookdetails: React.FC<BookdetailsProps> = ({ details }) => {
   const lapanganMap = groupBookingsByLapangan(details);
+  const router = useRouter();
+
   const [totalprice, setTotalprice] = useState(0);
   useEffect(() => {
     let total = 0;
@@ -71,7 +74,6 @@ const Bookdetails: React.FC<BookdetailsProps> = ({ details }) => {
               {lapangan} {formatBookingTimes(bookingTimes)}
             </p>
             <p>Rp {bookingTimes.length * 100000}</p>
-            
           </div>
         ))}
 
@@ -80,7 +82,7 @@ const Bookdetails: React.FC<BookdetailsProps> = ({ details }) => {
         <p>Rp {totalprice}</p>
       </div>
 
-      <button className="rounded-lg text-white font-bold w-full bg-[#00985B] px-80 py-7 text-2xl">
+      <button className="rounded-lg text-white font-bold w-full bg-[#00985B] px-80 py-7 text-2xl" onClick={() => router.push("/payment")}>
         Continue
       </button>
     </div>

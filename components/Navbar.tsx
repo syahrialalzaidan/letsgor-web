@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isTop, setIsTop] = useState(true);
 
   const handleScroll = () => {
-    setIsTop(window.scrollY < 50);
+    setIsTop(window.scrollY < 5);
   };
 
   useEffect(() => {

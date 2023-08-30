@@ -126,7 +126,7 @@ export default function Explore() {
               </select>
           </div>
 
-          <button className="bg-[#0E8A76] text-white py-3 px-10 rounded-lg" onClick={()=> router.push("/explore/search")}>
+          <button className="bg-[#0E8A76] text-white py-3 px-10 rounded-lg" onClick={()=> router.push("/search")}>
             Cari
           </button>
         </div>
