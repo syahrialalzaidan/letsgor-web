@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const pathName = usePathname();
   const [isTop, setIsTop] = useState(true);
 
   const handleScroll = () => {
@@ -23,19 +25,19 @@ const Navbar = () => {
     },
     {
       label: "LetsGOR",
-      link: "/",
+      link: "/explore",
     },
     {
       label: "LetsHealthy",
-      link: "/",
+      link: "/404",
     },
     {
       label: "LetsCommunity",
-      link: "/",
+      link: "/404",
     },
     {
       label: "Tentang",
-      link: "/",
+      link: "/404",
     },
   ];
   return (
@@ -56,9 +58,15 @@ const Navbar = () => {
         <div className="flex gap-7 items-center">
           {navbarData.map((item) => {
             return (
-              <p key={item.label} className="text-white cursor-pointer">
-                {item.label}
-              </p>
+              <Link href={item.link} key={item.label}>
+                <p
+                  className={`text-white cursor-pointer ${
+                    pathName === item.link && "font-semibold"
+                  }`}
+                >
+                  {item.label}
+                </p>
+              </Link>
             );
           })}
           <div className="px-7 py-2 bg-white text-primary font-bold cursor-pointer">

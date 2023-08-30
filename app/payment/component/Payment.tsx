@@ -1,5 +1,10 @@
 import Image from "next/image";
-import { AiOutlineLeft, AiFillStar, AiOutlineDollarCircle } from "react-icons/ai";
+import Link from "next/link";
+import {
+  AiOutlineLeft,
+  AiFillStar,
+  AiOutlineDollarCircle,
+} from "react-icons/ai";
 import { BsTelephoneFill } from "react-icons/bs";
 import { BsCalendarDateFill } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
@@ -11,7 +16,9 @@ export default function Payment() {
       <div className="bg-[url('/payment/navbar-bg.svg')] h-20 bg-cover mb-10"></div>
       <div className="px-24">
         <div className="flex gap-4 items-center">
-          <AiOutlineLeft className="text-5xl font-bold" />
+          <Link href="/lapangan">
+            <AiOutlineLeft className="text-5xl font-bold cursor-pointer" />
+          </Link>
           <p className="text-3xl font-bold">Booking Confirmation</p>
         </div>
 
@@ -77,10 +84,16 @@ export default function Payment() {
         <div className="flex justify-between px-6 py-5 rounded-md border border-gray-200 mb-16 shadow-xl">
           <div className="text-black/30 text-xl items-center flex gap-8 font-semibold">
             <RiCoupon4Line className="text-2xl" />
-            <input type="text" placeholder="Add Promo" className="placeholder-black/30 focus:outline-none"/>
+            <input
+              type="text"
+              placeholder="Add Promo"
+              className="placeholder-black/30 focus:outline-none"
+            />
           </div>
 
-          <p className="cursor-pointer text-[#0E8A76] text-xl font-semibold">Add</p>
+          <p className="cursor-pointer text-[#0E8A76] text-xl font-semibold">
+            Add
+          </p>
         </div>
 
         <h1 className="text-xl font-bold mb-3">Payment Details</h1>
@@ -99,23 +112,28 @@ export default function Payment() {
           <p className="font-semibold">Rp 10.000</p>
         </div>
 
-        <hr/>
+        <hr />
 
         <div className="text-xl mb-16 flex justify-between">
           <p>Total Payment</p>
           <p className="font-semibold">Rp 210.000</p>
         </div>
-        
+
         <h1 className="text-xl font-bold mb-3">Payment Method</h1>
         <div className="flex justify-between px-6 py-5 rounded-md border border-gray-200 mb-16 shadow-xl">
           <div className="text-black/30 text-xl items-center flex gap-8 font-semibold">
             <AiOutlineDollarCircle className="text-2xl" />
-            <input type="text" placeholder="Select Payment" className="placeholder-black/30 focus:outline-none"/>
+            <input
+              type="text"
+              placeholder="Select Payment"
+              className="placeholder-black/30 focus:outline-none"
+            />
           </div>
 
-          <p className="cursor-pointer text-[#0E8A76] text-xl font-semibold">Change</p>
+          <p className="cursor-pointer text-[#0E8A76] text-xl font-semibold">
+            Change
+          </p>
         </div>
-
       </div>
     </div>
   );

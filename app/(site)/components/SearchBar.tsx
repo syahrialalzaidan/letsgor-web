@@ -4,6 +4,7 @@ import { BiMap, BiBasketball } from "react-icons/bi";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { IconType } from "react-icons";
 import { useState } from "react";
+import Link from "next/link";
 
 const SearchBar = () => {
   const [isLapangan, setIsLapangan] = useState(true);
@@ -61,8 +62,8 @@ const SearchBar = () => {
             </>
           )}
         </div>
-        <div className="bg-primary text-white px-5 flex items-center font-semibold">
-          Cari
+        <div className="bg-primary text-white px-5 flex items-center font-semibold cursor-pointer">
+          <Link href="/explore">Cari</Link>
         </div>
       </div>
     </div>
