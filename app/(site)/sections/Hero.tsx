@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <div className="w-full h-screen bg-gradient-to-br from-[#0E8A76] to-[#0ABF73] relative overflow-hidden z-0">
       <div className="flex flex-col w-1/2 h-full justify-center px-[3%] items-start text-white">
@@ -11,7 +14,7 @@ const Hero = () => {
           <span className="font-bold">LetsGOR</span> hadir untuk mempermudah
           pemesanan lapangan tanpa perlu menunggu jawaban dari pemilik lapangan.
         </p>
-        <div className="bg-white px-9 py-5 text-[#0E8A76] font-bold">
+        <div className="cursor-pointer bg-white px-9 py-5 text-[#0E8A76] font-bold" onClick={() => router.push("/explore")}>
           Booking Lapangan
         </div>
       </div>

@@ -74,7 +74,7 @@ const Page = () => {
       >
         {data.map((item) => SwiperSlideElement({ src: item }))}
       </Swiper>
-      <div className="container mx-auto mb-14">
+      <div className="container px-20 mx-auto mb-14">
         <div>
           <div className="flex gap-5 mb-4 mt-8">
             <h1 className="font-semibold text-3xl">GOR Cisitu 55</h1>
