@@ -57,7 +57,7 @@ export default function Search() {
   ];
   return (
     <div>
-      <div className="pt-32 flex flex-col justify-center items-center bg-[url('/search/atas-search.svg')] h-64 bg-cover w-full">
+      <div className="pt-20 flex flex-col justify-center items-center bg-[url('/search/atas-search.svg')] h-52 bg-cover w-full">
         <div className="flex gap-3">
           <div className="flex">
             {/* <div className="bg-white text-[#0E8A76] flex w-72 p-3 gap-2 rounded-lg">
@@ -117,7 +117,7 @@ export default function Search() {
       </div>
 
       <div className="px-20 mt-5">
-        <div className="flex gap-6">
+        <div className="flex gap-6 ml-36">
           <div className="flex">
             <FaFilter className="ml-2 text-2xl text-[#0E8A76] absolute self-center" />
             <select
