@@ -8,9 +8,9 @@ import {
 
 const Ask = () => {
   return (
-    <div className="w-full h-[90vh] bg-[url('/landing/Lari.svg')] bg-cover bg-no-repeat">
-      <div className="flex h-full w-full px-[5%]">
-        <div className="w-1/2 flex flex-col justify-center text-white">
+    <div className="w-full min-h-[90vh] bg-[url('/landing/Lari.svg')] bg-cover bg-no-repeat">
+      <div className="flex flex-col md:flex-row gap-10 h-full w-full px-[5%] py-16 md:py-10">
+        <div className="md:w-1/2 w-full flex flex-col justify-center text-white">
           <h1 className="font-semibold text-4xl">
             Lelah menerima puluhan chat pelanggan? Kontak kami!
           </h1>
@@ -36,12 +36,24 @@ const Ask = () => {
             <AiOutlineInstagram size={24} />
           </div>
         </div>
-        <div className="w-1/2 flex justify-center items-center px-14">
+        <div className="w-full max-w-xl flex justify-center items-center">
           <div className="w-full bg-white py-10 px-10 flex flex-col text-center gap-3">
-            <h1 className="text-primary font-semibold text-4xl mb-2">ada pertanyaan..?</h1>
-            <input type="text" className="bg-gray-300 py-4 px-4" placeholder="Masukan email anda disini..." />
-            <input type="text" className="bg-gray-300 py-4 px-4" placeholder="Masukan pertanyaan anda disini..." />
-            <button className="bg-primary text-white font-semibold py-4">Kirim</button>
+            <h1 className="text-primary font-semibold text-3xl md:text-4xl mb-2">
+              ada pertanyaan..?
+            </h1>
+            <input
+              type="text"
+              className="bg-gray-300 py-4 px-4"
+              placeholder="Masukan email anda disini..."
+            />
+            <input
+              type="text"
+              className="bg-gray-300 py-4 px-4"
+              placeholder="Masukan pertanyaan anda disini..."
+            />
+            <button className="bg-primary text-white font-semibold py-4">
+              Kirim
+            </button>
           </div>
         </div>
       </div>

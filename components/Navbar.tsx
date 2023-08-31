@@ -4,13 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { HiMenu } from "react-icons/hi";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
   const pathName = usePathname();
   const [isTop, setIsTop] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleScroll = () => {
     setIsTop(window.scrollY < 5);
+  };
+
+  const handleOpen = () => {
+    setIsOpen((prev) => !prev);
   };
 
   useEffect(() => {
@@ -55,7 +62,7 @@ const Navbar = () => {
             <p className="font-semibold text-lg text-white">LetsGOR</p>
           </div>
         </Link>
-        <div className="flex gap-7 items-center">
+        <div className="hidden md:flex gap-7 items-center">
           {navbarData.map((item) => {
             return (
               <Link href={item.link} key={item.label}>
@@ -71,6 +78,34 @@ const Navbar = () => {
           })}
           <div className="px-7 py-2 bg-white text-primary font-bold cursor-pointer">
             MASUK
+          </div>
+        </div>
+        <div
+          className="md:hidden text-white cursor-pointer"
+          onClick={handleOpen}
+        >
+          <HiMenu size={30} />
+        </div>
+        <div
+          className={`absolute w-screen h-screen top-0 left-full bg-white ${
+            isOpen ? "-translate-x-full" : "translate-x-0"
+          } transition`}
+        >
+          <div className="px-[7%] py-7 w-full h-full">
+            <div>
+              <IoCloseSharp
+                size={30}
+                className="text-black cursor-pointer ml-auto"
+                onClick={handleOpen}
+              />
+            </div>
+            <div className="flex flex-col gap-3 text-xl my-7">
+              {navbarData.map((item) => (
+                <Link href={item.link} key={item.label}>
+                  <p>{item.label}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
