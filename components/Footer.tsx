@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white w-full h-[40vh]">
-      <div className="w-full h-full px-[5%] pt-10 pb-5 flex flex-col text-center">
+    <div className="bg-black text-white w-full">
+      <div className="w-full min-h-[40vh] px-[5%] pt-10 pb-5 flex flex-col text-center gap-4">
         <div className="flex flex-col md:flex-row justify-start md:justify-between items-center flex-1 gap-7">
           <div className="flex items-center gap-2">
             <Image src={"/logo/Logo.svg"} alt="Logo" width={30} height={30} />

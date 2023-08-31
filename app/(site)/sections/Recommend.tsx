@@ -55,7 +55,7 @@ const Recommend = () => {
   return (
     <div className="bg-[#F0FDF9] w-full min-h-screen">
       <div className="container mx-auto py-20">
-        <h1 className="text-4xl font-semibold text-primary text-center">
+        <h1 className="text-2xl md:text-4xl font-semibold text-primary text-center">
           Rekomendasi Lapangan Untukmu
         </h1>
         <div className="w-full flex flex-wrap justify-center gap-10 mt-8">

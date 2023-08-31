@@ -14,7 +14,7 @@ export default function Payment() {
   return (
     <div>
       <div className="bg-[url('/payment/navbar-bg.svg')] h-20 bg-cover mb-10"></div>
-      <div className="px-12 lg:px-24">
+      <div className="px-[5%]">
         <div className="flex gap-4 items-center">
           <Link href="/lapangan">
             <AiOutlineLeft className="text-2xl lg:text-5xl font-bold cursor-pointer" />
@@ -22,7 +22,7 @@ export default function Payment() {
           <p className="text-lg lg:text-2xl font-bold">Booking Confirmation</p>
         </div>
 
-        <div className="flex flex-col lg:flex-row bg-white shadow-xl border border-gray-300 gap-8 rounded-lg my-11">
+        <div className="flex flex-col lg:flex-row bg-white shadow-xl border border-gray-300 gap-8 rounded-lg my-11 pb-10 md:pb-0">
           <Image
             src="/payment/basket-payment.svg"
             width={505}
@@ -30,7 +30,7 @@ export default function Payment() {
             alt="basket"
           />
           <div className="lg:py-8 py-1 px-4 flex flex-col gap-6">
-            <div className="flex gap-8">
+            <div className="flex gap-2 md:gap-8 items-center">
               <h1 className="text-2xl font-semibold">GOR Cisitu 55</h1>
               <div className="py-1 px-4 border border-[#00985B] text-[#00985B] w-32 flex justify-center items-center rounded-3xl">
                 Badminton
@@ -81,7 +81,7 @@ export default function Payment() {
         </div>
 
         <h1 className="text-xl font-bold mb-3">Promo</h1>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 justify-center items-center lgjustify-between px-3 lg:px-6 py-5 rounded-md border border-gray-200 mb-16 shadow-xl">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 justify-center items-center lg:justify-between px-3 lg:px-6 py-5 rounded-md border border-gray-200 mb-16 shadow-xl">
           <div className="text-black/30 text-xl items-center flex gap-4 lg:gap-8 font-semibold">
             <RiCoupon4Line className="text-2xl" />
             <input
@@ -120,7 +120,7 @@ export default function Payment() {
         </div>
 
         <h1 className="text-xl font-bold mb-3">Payment Method</h1>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 justify-center items-center lgjustify-between px-3 lg:px-6 py-5 rounded-md border border-gray-200 mb-16 shadow-xl">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 justify-center items-center lg:justify-between px-3 lg:px-6 py-5 rounded-md border border-gray-200 mb-16 shadow-xl">
           <div className="text-black/30 text-xl items-center flex gap-4 lg:gap-8 font-semibold">
             <AiOutlineDollarCircle className="text-2xl" />
             <input
