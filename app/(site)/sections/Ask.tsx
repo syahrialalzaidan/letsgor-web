@@ -8,9 +8,9 @@ import {
 
 const Ask = () => {
   return (
-    <div className="w-full min-h-[90vh] bg-[url('/landing/Lari.svg')] bg-cover bg-no-repeat">
-      <div className="flex flex-col md:flex-row gap-10 h-full w-full px-[5%] py-16 md:py-10">
-        <div className="md:w-1/2 w-full flex flex-col justify-center text-white">
+    <div className="w-full min-h-[90vh] bg-[url('/landing/Lari.svg')] bg-cover bg-no-repeat flex items-center">
+      <div className="flex flex-col md:flex-row gap-10 h-full px-[5%] py-16 md:py-10 items-center justify-between">
+        <div className="md:w-1/2 w-full flex flex-col justify-center text-white px-3">
           <h1 className="font-semibold text-4xl">
             Lelah menerima puluhan chat pelanggan? Kontak kami!
           </h1>

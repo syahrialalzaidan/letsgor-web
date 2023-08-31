@@ -6,7 +6,7 @@ const Hero = () => {
   const router = useRouter();
   return (
     <div className="w-full h-screen bg-gradient-to-br from-[#0E8A76] to-[#0ABF73] relative overflow-hidden z-0">
-      <div className="flex flex-col w-full md:w-1/2 h-full justify-start pt-[30%] md:justify-center px-[7%] items-start text-white">
+      <div className="flex flex-col w-full md:w-1/2 h-full justify-start pt-[30%] md:pt-0 md:justify-center px-[7%] items-start text-white">
         <h1 className="font-bold text-5xl md:text-[3.4rem] leading-snug">
           Membantu Temukan Lapangan Impian.
         </h1>
