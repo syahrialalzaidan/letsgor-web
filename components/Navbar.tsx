@@ -76,7 +76,7 @@ const Navbar = () => {
               </Link>
             );
           })}
-          <div className="px-7 py-2 bg-white text-primary font-bold cursor-pointer">
+          <div className="px-7 py-2 bg-white text-primary font-bold cursor-pointer transition-colors duration-500 hover:bg-primary hover:text-white">
             MASUK
           </div>
         </div>
@@ -105,6 +105,9 @@ const Navbar = () => {
                   <p className="hover:underline">{item.label}</p>
                 </Link>
               ))}
+              <div className="px-7 py-2 bg-primary text-white font-bold cursor-pointer transition-colors duration-500 w-[150px] text-center mt-5 hover:underline">
+                MASUK
+              </div>
             </div>
           </div>
         </div>
