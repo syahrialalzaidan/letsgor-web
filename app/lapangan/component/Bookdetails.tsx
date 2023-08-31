@@ -69,7 +69,7 @@ const Bookdetails: React.FC<BookdetailsProps> = ({ details }) => {
       {Array.from(lapanganMap.entries())
         .filter((_, index) => index > 0) // Exclude the first element
         .map(([lapangan, bookingTimes], index) => (
-          <div key={index} className="flex justify-between text-2xl mb-10">
+          <div key={index} className="flex flex-col lg:flex-row justify-between text-lg lg:text-2xl mb-10">
             <p>
               {lapangan} {formatBookingTimes(bookingTimes)}
             </p>
@@ -77,12 +77,12 @@ const Bookdetails: React.FC<BookdetailsProps> = ({ details }) => {
           </div>
         ))}
 
-      <div className="flex justify-between text-2xl mb-10">
+      <div className="flex flex-col lg:flex-row justify-between text-lg lg:text-2xl mb-10">
         <p className="font-bold">Total Price</p>
         <p>Rp {totalprice}</p>
       </div>
 
-      <button className="rounded-lg text-white font-bold w-full bg-[#00985B] px-80 py-7 text-2xl" onClick={() => router.push("/payment")}>
+      <button className="rounded-lg text-white flex justify-center font-bold w-full bg-[#00985B] px-20 lg:px-80 py-7 text-base mb-8 lg:text-2xl" onClick={() => router.push("/payment")}>
         Continue
       </button>
     </div>
