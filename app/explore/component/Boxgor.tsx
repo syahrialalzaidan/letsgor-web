@@ -53,5 +53,6 @@ export default function Boxgor(props: BoxgorProps) {
         </div>
       </div>
     </Link>
+
   );
 }

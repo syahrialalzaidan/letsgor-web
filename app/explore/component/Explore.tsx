@@ -133,7 +133,7 @@ export default function Explore() {
       </div>
 
       <div className="px-28">
-        <h1 className="text-2xl font-semibold mt-8 mb-4">Last Seen</h1>
+        <h1 className="text-2xl font-semibold mt-8 mb-4 ml-32">Last Seen</h1>
         <div className="flex gap-12 flex-wrap justify-center mb-9">
           {data.slice(0, 3).map((place, index) => (
             <Boxgor

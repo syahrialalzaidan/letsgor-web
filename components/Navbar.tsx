@@ -29,15 +29,15 @@ const Navbar = () => {
     },
     {
       label: "LetsHealthy",
-      link: "/404",
+      link: "/soon",
     },
     {
       label: "LetsCommunity",
-      link: "/404",
+      link: "/soon",
     },
     {
       label: "Tentang",
-      link: "/404",
+      link: "/soon",
     },
   ];
   return (

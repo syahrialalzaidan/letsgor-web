@@ -28,7 +28,7 @@ const SearchBar = () => {
     );
   };
   return (
-    <div className="w-full text-primary my-10">
+    <div className="w-10/12 text-primary my-10">
       <div className="flex w-1/4 rounded-t-md overflow-hidden">
         <div
           className={`py-2 flex-1 cursor-pointer ${
