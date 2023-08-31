@@ -83,10 +83,10 @@ export default function Jadwal(props: JadwalProps) {
         className="w-full object-cover mb-8"
         alt="basket"
       />
-      <div className="px-14 pb-28">
-        <div className="flex justify-between">
+      <div className="px-2 lg:px-14 pb-28">
+        <div className="flex flex-col lg:flex-row justify-between mb-6 lg:mb-0">
           <p className="text-2xl font-bold mb-7">{props.name}</p>
-          <p className="text-2xl font-bold text-[#9F9F9F]">Rp. 50.000</p>
+          <p className="text-xl lg:text-2xl font-bold text-[#9F9F9F]">Rp. 50.000</p>
         </div>
         <div className="flex flex-wrap gap-8 justify-center">
           {data.map((jam, index) => (

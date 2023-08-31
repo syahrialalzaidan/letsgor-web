@@ -57,8 +57,8 @@ export default function Search() {
   ];
   return (
     <div>
-      <div className="pt-20 flex flex-col justify-center items-center bg-[url('/search/atas-search.svg')] h-52 bg-cover w-full">
-        <div className="flex gap-3">
+      <div className="pt-20 flex flex-col justify-center items-center py-8 bg-[url('/search/atas-search.svg')] lg:h-52 bg-cover w-full">
+      <div className="flex flex-col lg:flex-row gap-3">
           <div className="flex">
             {/* <div className="bg-white text-[#0E8A76] flex w-72 p-3 gap-2 rounded-lg">
                         <IoLocationOutline className="text-2xl" />
@@ -107,7 +107,12 @@ export default function Search() {
               <option value="voli">Volley</option>
               <option value="pingpong">Pingpong</option>
               <option value="others">others</option>
-            </select>
+
+              
+
+
+        
+              </select>
           </div>
 
           <button className="bg-[#0E8A76] text-white py-3 px-10 rounded-lg">
@@ -116,12 +121,12 @@ export default function Search() {
         </div>
       </div>
 
-      <div className="px-20 mt-5">
-        <div className="flex gap-6 ml-36">
+      <div className="lg:px-20 px-4 mt-5">
+        <div className="flex justify-start flex-row gap-6">
           <div className="flex">
-            <FaFilter className="ml-2 text-2xl text-[#0E8A76] absolute self-center" />
+            <FaFilter className="ml-2 text-lg lg:text-2xl text-[#0E8A76] absolute self-center" />
             <select
-              className="bg-[#D0E3E0] text-[#0E8A76] flex w-40 py-3 px-10 gap-2 rounded-lg"
+              className="bg-[#D0E3E0] text-[#0E8A76] flex w-32 lg:w-40 py-3 px-7 lg:px-10 gap-2 rounded-lg"
               placeholder="Tanggal"
             >
               <option value="basket">Basket</option>
@@ -131,9 +136,9 @@ export default function Search() {
           </div>
 
           <div className="flex">
-            <FaSort className="ml-2 text-2xl text-[#0E8A76] absolute self-center" />
+            <FaSort className="ml-2 text-lg lg:text-2xl text-[#0E8A76] absolute self-center" />
             <select
-              className="bg-[#D0E3E0] text-[#0E8A76] flex w-40 py-3 px-10 gap-2 rounded-lg"
+              className="bg-[#D0E3E0] text-[#0E8A76] flex w-32 lg:w-40 py-3 px-7 lg:px-10 gap-2 rounded-lg"
               placeholder="Tanggal"
             >
               <option value="basket">Price</option>

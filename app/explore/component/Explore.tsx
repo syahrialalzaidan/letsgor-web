@@ -61,15 +61,15 @@ export default function Explore() {
 
   return (
     <div className="">
-      <div className="bg-[url('/explore/atas.svg')] flex flex-col justify-center items-center gap-8 bg-cover h-72 w-full pt-20">
-        <div className="text-white">
-          <h1 className="font-semibold text-4xl">Temukan Lapangan Pilihanmu</h1>
+      <div className="bg-[url('/explore/atas.svg')] flex flex-col justify-center items-center gap-8 bg-cover pt-24 pb-5 lg:h-72 w-full lg:pt-20">
+        <div className="text-white text-center lg:px-0 px-8">
+          <h1 className="font-semibold text-4xl mb-4">Temukan Lapangan Pilihanmu</h1>
           <p className="text-lg">
             Sekarang Anda dapat menemukan lapangan yang sesuai untukmu
           </p>
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col lg:flex-row gap-3">
           <div className="flex">
             {/* <div className="bg-white text-[#0E8A76] flex w-72 p-3 gap-2 rounded-lg">
                         <IoLocationOutline className="text-2xl" />
@@ -132,8 +132,8 @@ export default function Explore() {
         </div>
       </div>
 
-      <div className="px-28">
-        <h1 className="text-2xl font-semibold mt-8 mb-4 ml-32">Last Seen</h1>
+      <div className="lg:px-28">
+        <h1 className="text-xl lg:text-2xl font-semibold mt-8 mb-4 ml-32 text-left relative">Last Seen</h1>
         <div className="flex gap-12 flex-wrap justify-center mb-9">
           {data.slice(0, 3).map((place, index) => (
             <Boxgor
@@ -148,7 +148,7 @@ export default function Explore() {
           ))}
         </div>
 
-        <h1 className="font-bold text-5xl text-center text-[#0E8A76]">
+        <h1 className="font-bold text-2xl lg:text-5xl text-center text-[#0E8A76]">
           Rekomendasi Lapangan UntukMu
         </h1>
         <div className="flex flex-wrap gap-12 justify-center mt-12">
