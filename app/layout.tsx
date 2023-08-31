@@ -24,6 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.className}>
+      <link rel="icon" href="/logo/Logo.svg" />
       <body>
         <Navbar />
         {children}
