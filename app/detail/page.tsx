@@ -28,7 +28,7 @@ const Page = () => {
   const SwiperSlideElement = ({ src }: { src: string }) => {
     return (
       <SwiperSlide>
-        <div className="w-full aspect-[6/2] relative">
+        <div className="w-full aspect-[6/4] md:aspect-[6/2] relative">
           <Image
             src={src}
             alt="atas"
@@ -43,7 +43,9 @@ const Page = () => {
   const ReviewElement = () => {
     return (
       <div className="flex w-full gap-5 my-3 items-center">
-        <div className="w-[6%] aspect-square bg-primary rounded-full overflow-hidden"></div>
+        <div className="w-[20%] max-w-[5rem] aspect-square bg-primary rounded-full overflow-hidden relative">
+          <Image src="/lapangan/komuk.jpg" fill={true} className="object-cover w-full h-full blur-md hover:blur-0 transition" alt="komuk"/>
+        </div>
         <div>
           <div className="flex gap-3">
             <h1 className="font-medium text-lg">Gijax</h1>
@@ -56,7 +58,7 @@ const Page = () => {
             <HiStar size={24} className="text-primary" />
             <HiStar size={24} className="text-primary" />
           </div>
-          <p>Lapangannya bagus banget dan rapi</p>
+          <p className="text-sm md:text-base">Lapangannya bagus banget dan rapi. Aku senang deh</p>
         </div>
       </div>
     );
@@ -74,7 +76,7 @@ const Page = () => {
       >
         {data.map((item) => SwiperSlideElement({ src: item }))}
       </Swiper>
-      <div className="container px-20 mx-auto mb-14">
+      <div className="container px-[7%] mx-auto mb-14">
         <div>
           <div className="flex gap-5 mb-4 mt-8">
             <h1 className="font-semibold text-3xl">GOR Cisitu 55</h1>
@@ -111,7 +113,7 @@ const Page = () => {
         <div className="border-gray-500/40 border-t-2 my-10" />
         <div>
           <h1 className="font-semibold text-2xl">Facilites</h1>
-          <div className="flex text-lg gap-10 my-6">
+          <div className="flex text-lg gap-10 my-6 flex-wrap">
             <div className="flex text-primary font-semibold flex-col justify-center items-center">
               <LuParkingCircle size={64} className="h-20" />
               <p>Parking</p>
@@ -153,7 +155,7 @@ const Page = () => {
         </div>
         <div className="border-gray-500/40 border-t-2 my-10" />
         <div>
-          <div className="flex items-center gap-5">
+          <div className="flex flex-col md:flex-row items-start  md:items-center gap-5">
             <h1 className="font-semibold text-2xl">Reviews</h1>
             <div className="flex items-center gap-2 text-lg">
               <p>5.0</p>
@@ -174,10 +176,10 @@ const Page = () => {
           </div>
           <p className="text-primary font-medium text-xl">Read all reviews</p>
         </div>
-        <div className="bg-gradient-to-r from-primary to-secondary to-[150%] w-full py-3 px-12 rounded-lg mt-10 flex items-center justify-between text-white">
+        <div className="bg-gradient-to-r from-primary to-secondary to-[150%] w-full py-3 px-[5%] gap-5 rounded-lg mt-10 flex flex-col md:flex-row items-center justify-between text-white">
           <div>
-            <h1 className="font-semibold text-2xl">Harga mulai dari</h1>
-            <p className="font-normal text-2xl">
+            <h1 className="font-semibold text-xl md:text-2xl">Harga mulai dari</h1>
+            <p className="font-normal text-lg md:text-2xl">
               Rp 70.000
               <span className="font-light text-white/70">/hour/field</span>
             </p>
