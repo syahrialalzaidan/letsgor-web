@@ -7,11 +7,11 @@ import {
 const ServiceCard = ({ service }: { service: string }) => {
   const getIcon = () => {
     if (service === "LetsBook") {
-      return <BsFillCalendarWeekFill size={38}/>;
+      return <BsFillCalendarWeekFill size={38} />;
     } else if (service === "LetsHealthy") {
-      return <BsFillHeartPulseFill size={38}/>;
+      return <BsFillHeartPulseFill size={38} />;
     } else {
-      return <BsFillPeopleFill size={38}/>;
+      return <BsFillPeopleFill size={38} />;
     }
   };
 
@@ -25,7 +25,7 @@ const ServiceCard = ({ service }: { service: string }) => {
     }
   };
   return (
-    <div className="bg-white shadow-lg w-full lg:w-[30%] cursor-pointer text-primary flex flex-col justify-center items-center py-14 px-10 gap-2 text-center rounded-lg group hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition">
+    <div className="bg-white shadow-lg w-full lg:w-[30%] text-primary flex flex-col justify-center items-center py-14 px-10 gap-2 text-center rounded-lg group hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition">
       <h1 className="font-semibold text-[1.7rem]">{service}</h1>
       <div className="text-white bg-primary p-4 rounded-full flex justify-center my-2 group-hover:bg-white group-hover:text-primary transition">
         {getIcon()}
