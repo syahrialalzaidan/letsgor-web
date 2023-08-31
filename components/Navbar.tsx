@@ -67,7 +67,7 @@ const Navbar = () => {
             return (
               <Link href={item.link} key={item.label}>
                 <p
-                  className={`text-white cursor-pointer ${
+                  className={`text-white cursor-pointer hover:underline ${
                     pathName === item.link && "font-semibold"
                   }`}
                 >
@@ -102,7 +102,7 @@ const Navbar = () => {
             <div className="flex flex-col gap-3 text-xl my-7">
               {navbarData.map((item) => (
                 <Link href={item.link} key={item.label} onClick={handleOpen}>
-                  <p>{item.label}</p>
+                  <p className="hover:underline">{item.label}</p>
                 </Link>
               ))}
             </div>
