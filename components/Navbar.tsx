@@ -101,7 +101,7 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col gap-3 text-xl my-7">
               {navbarData.map((item) => (
-                <Link href={item.link} key={item.label}>
+                <Link href={item.link} key={item.label} onClick={handleOpen}>
                   <p>{item.label}</p>
                 </Link>
               ))}
