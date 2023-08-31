@@ -36,7 +36,7 @@ const Ask = () => {
             <AiOutlineInstagram size={24} />
           </div>
         </div>
-        <div className="w-full max-w-xl flex justify-center items-center bg-pink-300">
+        <div className="w-full max-w-xl flex justify-center items-center">
           <div className="w-full bg-white py-10 px-8 flex flex-col text-center gap-3">
             <h1 className="text-primary font-semibold text-3xl md:text-4xl mb-2">
               ada pertanyaan..?
