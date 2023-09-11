@@ -15,7 +15,7 @@ const Hero = () => {
           pemesanan lapangan tanpa perlu menunggu jawaban dari pemilik lapangan.
         </p>
         <div
-          className="cursor-pointer bg-white px-9 py-5 text-[#0E8A76] font-bold"
+          className="cursor-pointer bg-white px-9 py-5 text-[#0E8A76] hover:text-white hover:bg-[#0E8A76] font-bold transition-colors duration-500"
           onClick={() => router.push("/explore")}
         >
           Booking Lapangan

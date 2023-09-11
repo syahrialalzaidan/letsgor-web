@@ -5,6 +5,7 @@ import {
   AiOutlineInstagram,
   AiOutlineTwitter,
 } from "react-icons/ai";
+import Link from "next/link";
 
 const Ask = () => {
   return (
@@ -26,14 +27,20 @@ const Ask = () => {
             </div>
             <div className="flex gap-3">
               <HiOutlineMail size={24} />
-              <p>letsgor@gmail.com</p>
+              <p>letsgor.id@gmail.com</p>
             </div>
           </div>
           <p className="font-medium text-lg">Social Media</p>
           <div className="flex gap-2 mt-1">
-            <AiOutlineFacebook size={24} />
-            <AiOutlineTwitter size={24} />
-            <AiOutlineInstagram size={24} />
+            <Link href={"https://instagram.com/letsgor.id"} target="_blank">
+              <AiOutlineInstagram size={24} />
+            </Link>
+            <Link href={"https://twitter.com/xmriz"}>
+              <AiOutlineTwitter size={24} />
+            </Link>
+            <Link href={"https://facebook.com/xmriz"}>
+              <AiOutlineFacebook size={24} />
+            </Link>
           </div>
         </div>
         <div className="w-full max-w-xl flex justify-center items-center">

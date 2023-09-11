@@ -53,7 +53,7 @@ const Navbar = () => {
         isTop
           ? "bg-transparent"
           : "bg-gradient-to-r from-primary to-[170%] to-secondary"
-      } py-4 z-40 transition duration-400`}
+      } py-4 z-40 transition-colors duration-500`}
     >
       <div className="w-full h-full flex justify-between items-center px-[5%]">
         <Link href="/">

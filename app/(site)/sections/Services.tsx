@@ -2,7 +2,7 @@ import ServiceCard from "../components/ServiceCard";
 
 const Services = () => {
   return (
-    <div className="w-full min-h-screen bg-[#F0FDF9] py-20">
+    <div className="w-full min-h-screen bg-[#F0FDF9] py-20 flex flex-col justify-center items-center">
       <div className="container mx-auto">
         <div className="text-center">
           <h1 className="md:text-[2.5rem] text-3xl text-primary font-semibold">
