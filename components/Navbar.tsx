@@ -21,6 +21,20 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    // Retrieve the value from sessionStorage and convert it to a boolean
+    const storedIsTop = sessionStorage.getItem("isTop");
+    if (storedIsTop !== null) {
+      setIsTop(storedIsTop === "true");
+    }
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsTop(currentScrollY < 5);
+
+      // Store the boolean as a string in sessionStorage
+      sessionStorage.setItem("isTop", (currentScrollY < 5).toString());
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -53,7 +67,7 @@ const Navbar = () => {
         isTop
           ? "bg-transparent"
           : "bg-gradient-to-r from-primary to-[170%] to-secondary"
-      } py-4 z-40 transition-colors duration-500`}
+      } py-4 z-40`}
     >
       <div className="w-full h-full flex justify-between items-center px-[5%]">
         <Link href="/">
